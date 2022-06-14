@@ -6,9 +6,10 @@ namespace Search_in_a_row_wise_and_column_wise_sorted_matrix
   {
     static void Main(string[] args)
     {
-      int[][] matrix = new int[4][] { new int[] { 10, 20, 30, 40 }, new int[] { 15, 25, 35, 45 }, new int[] { 27, 29, 37, 48 }, new int[] { 32, 33, 39, 50 } };
+      //int[][] matrix = new int[4][] { new int[] { 10, 20, 30, 40 }, new int[] { 15, 25, 35, 45 }, new int[] { 27, 29, 37, 48 }, new int[] { 32, 33, 39, 50 } };
+      int[][] matrix = new int[1][] { new int[] { 1, 3 }  };
       Solution s = new Solution();
-      var (i, j) = s.Search(matrix, 51);
+      var (i, j) = s.Search(matrix, 3);
       Console.WriteLine($"{i}/{j}");
     }
   }
@@ -20,7 +21,7 @@ namespace Search_in_a_row_wise_and_column_wise_sorted_matrix
       if (matrix == null || matrix.Length == 0) return (-1, -1);
 
       int i = 0;
-      int j = matrix.Length - 1;
+      int j = matrix[0].Length - 1;
 
       // As the array is sorted in rows and columns in Asc
       // We start with first row and last column
